@@ -1,0 +1,17 @@
+syntax = "proto3";
+package greeting;
+option java_package = "com.proto.greeting";
+option java_multiple_files = true;
+
+service CalculatorService {
+  rpc sumNums(CalculatorRequest) returns (CalculatorResponse);
+}
+
+message CalculatorRequest {
+  int32 first_num = 1;
+  int32 second_num = 2;
+}
+
+message CalculatorResponse{
+  int32 sum_of_nums = 1;
+}
